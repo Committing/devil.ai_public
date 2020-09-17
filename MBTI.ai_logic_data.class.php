@@ -78,6 +78,105 @@ class MBTI_logic_data extends ai_extended_logic
         'ESTJ' => array( 2, 2, 2, 2, 2, 3, 5, 2, 5, 3, 5, 3, 4, 4, 4, 4 ),
     );
 
+    public static $personality_data = array(
+        'INFP' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ENFP' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'INFJ' => array(
+            'ego' => 'INFJ',
+            'subconscious' => 'ESTP',
+            'unconscious' => 'ENFP',
+            'superego' => 'ISTJ'
+        ),
+        'ENFJ' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'INTJ' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ENTJ' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'INTP' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ENTP' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ISFP' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ESFP' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ISTP' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ESTP' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ISFJ' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ESFJ' => array(
+            'ego' => 'ESFJ',
+            'subconscious' => 'INTP',
+            'unconscious' => 'ISFP',
+            'superego' => 'ENTJ'
+        ),
+        'ISTJ' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+        'ESTJ' => array(
+            'ego' => '',
+            'subconscious' => '',
+            'unconscious' => '',
+            'superego' => ''
+        ),
+    );
+
     
     // Legacy
     public static $trait_personality_links = array(

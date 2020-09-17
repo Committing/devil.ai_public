@@ -1,3 +1,5 @@
+![The Smart Test MBTI.ai Logo](https://mbti.ai/assets/images/mmmm.png)
+
 # [MBTI.ai](https://mbti.ai)
 
 For: https://mbti.ai
