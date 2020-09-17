@@ -4,7 +4,7 @@ For: https://mbti.ai
 
 ## MBTI.ai_logic_data.class.php
 
-Data for the website.
+Partial data for the website.
 
 ## ai_extended_logic.class.php
 Prediction logic for personality Myers Briggs results.

@@ -79,7 +79,7 @@ class MBTI_logic_data extends ai_extended_logic
     );
 
     
-
+    // Legacy
     public static $trait_personality_links = array(
         'fe' => array(
             'ESFJ' => 1.25,
