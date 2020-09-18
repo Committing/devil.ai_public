@@ -83,97 +83,113 @@ class MBTI_logic_data extends ai_extended_logic
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ENFP' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'INFJ' => array(
             'ego' => 'INFJ',
             'subconscious' => 'ESTP',
             'unconscious' => 'ENFP',
-            'superego' => 'ISTJ'
+            'superego' => 'ISTJ',
+            'hero' => 'The Sage'
         ),
         'ENFJ' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'INTJ' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ENTJ' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'INTP' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ENTP' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ISFP' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ESFP' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ISTP' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ESTP' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ISFJ' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ESFJ' => array(
             'ego' => 'ESFJ',
             'subconscious' => 'INTP',
             'unconscious' => 'ISFP',
-            'superego' => 'ENTJ'
+            'superego' => 'ENTJ',
+            'hero' => ''
         ),
         'ISTJ' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
         'ESTJ' => array(
             'ego' => '',
             'subconscious' => '',
             'unconscious' => '',
-            'superego' => ''
+            'superego' => '',
+            'hero' => ''
         ),
     );
 
