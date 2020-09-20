@@ -78,118 +78,139 @@ class MBTI_logic_data extends ai_extended_logic
         'ESTJ' => array( 2, 2, 2, 2, 2, 3, 5, 2, 5, 3, 5, 3, 4, 4, 4, 4 ),
     );
 
+    public static $personality_traits = array(
+        'INTP' => array( 'ti', 'ne', 'si', 'fe', 'te', 'ni', 'se', 'fi', 'fe', 'si', 'ne', 'ti', 'fi', 'se', 'ni', 'te' ),
+        'ENTP' => array( 'ne', 'ti', 'fe', 'si', 'ni', 'te', 'fi', 'se', 'si', 'fe', 'ti', 'ne', 'se', 'fi', 'te', 'ni' ),
+        'ISFJ' => array( 'si', 'fe', 'ti', 'ne', 'se', 'fi', 'te', 'ni', 'ne', 'ti', 'fe', 'si', 'ni', 'te', 'fi', 'se' ),
+        'ESFJ' => array( 'fe', 'si', 'ne', 'ti', 'fi', 'se', 'ni', 'te', 'ti', 'ne', 'si', 'fe', 'te', 'ni', 'se', 'fi' ),
+        'ENTJ' => array( 'te', 'ni', 'se', 'fi', 'ti', 'ne', 'si', 'fe', 'fi', 'se', 'ni', 'te', 'fe', 'si', 'ne', 'ti' ),
+        'INTJ' => array( 'ni', 'te', 'fi', 'se', 'ne', 'ti', 'fe', 'si', 'se', 'fi', 'te', 'ni', 'si', 'fe', 'ti', 'ne' ),
+        'ESFP' => array( 'se', 'fi', 'te', 'ni', 'si', 'fe', 'ti', 'ne', 'ni', 'te', 'fi', 'se', 'ne', 'ti', 'fe', 'si' ),
+        'ISFP' => array( 'fi', 'se', 'ni', 'te', 'fe', 'si', 'ne', 'ti', 'te', 'ni', 'se', 'fi', 'ti', 'ne', 'si', 'fe' ),
+        'ISTP' => array( 'ti', 'se', 'ni', 'fe', 'te', 'si', 'ne', 'fi', 'fe', 'ni', 'se', 'ti', 'fi', 'ne', 'si', 'te' ),
+        'ESTP' => array( 'se', 'ti', 'fe', 'ni', 'si', 'te', 'fi', 'ne', 'ni', 'fe', 'ti', 'se', 'ne', 'fi', 'te', 'si' ),
+        'INFJ' => array( 'ni', 'fe', 'ti', 'se', 'ne', 'fi', 'te', 'si', 'se', 'ti', 'fe', 'ni', 'si', 'te', 'fi', 'ne' ),
+        'ENFJ' => array( 'fe', 'ni', 'se', 'ti', 'fi', 'ne', 'si', 'te', 'ti', 'se', 'ni', 'fe', 'te', 'si', 'ne', 'fi' ),
+        'ESTJ' => array( 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe', 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti' ),
+        'ISTJ' => array( 'si', 'te', 'fi', 'ne', 'se', 'ti', 'fe', 'ni', 'ne', 'fi', 'te', 'si', 'ni', 'fe', 'ti', 'se' ),
+        'ENFP' => array( 'ne', 'fi', 'te', 'si', 'ni', 'fe', 'ti', 'se', 'si', 'te', 'fi', 'ne', 'se', 'ti', 'fe', 'ni' ),
+        'INFP' => array( 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti', 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe' )
+    );
+
+
+
     public static $personality_data = array(
         'INFP' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'INFP',
+            'subconscious' => 'ESTJ',
+            'unconscious' => 'ENFJ',
+            'superego' => 'ISTP',
+            'hero' => 'The Healer'
         ),
         'ENFP' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ENFP',
+            'subconscious' => 'ISTJ',
+            'unconscious' => 'INFJ',
+            'superego' => 'ESTP',
+            'hero' => 'The Storyteller'
         ),
         'INFJ' => array(
             'ego' => 'INFJ',
             'subconscious' => 'ESTP',
             'unconscious' => 'ENFP',
             'superego' => 'ISTJ',
-            'hero' => 'The Sage'
+            'hero' => 'The Wise Sage'
         ),
         'ENFJ' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ENFJ',
+            'subconscious' => 'ISTP',
+            'unconscious' => 'INFP',
+            'superego' => 'ESTJ',
+            'hero' => 'The Protagonist'
         ),
         'INTJ' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'INTJ',
+            'subconscious' => 'ESFP',
+            'unconscious' => 'ENTP',
+            'superego' => 'ISFJ',
+            'hero' => 'The Mastermind'
         ),
         'ENTJ' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ENTJ',
+            'subconscious' => 'ISFP',
+            'unconscious' => 'INTP',
+            'superego' => 'ESFJ',
+            'hero' => 'The Commander'
         ),
         'INTP' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'INTP',
+            'subconscious' => 'ESFJ',
+            'unconscious' => 'ENTJ',
+            'superego' => 'ISFP',
+            'hero' => 'The Logical Thinker'
         ),
         'ENTP' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ENTP',
+            'subconscious' => 'ISFJ',
+            'unconscious' => 'ESFP',
+            'superego' => 'INTJ',
+            'hero' => 'The Creative Inventor'
         ),
         'ISFP' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ISFP',
+            'subconscious' => 'ENTJ',
+            'unconscious' => 'ESFJ',
+            'superego' => 'INTP',
+            'hero' => 'The Adventurer'
         ),
         'ESFP' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ESFP',
+            'subconscious' => 'INTJ',
+            'unconscious' => 'ISFJ',
+            'superego' => 'ENTP',
+            'hero' => 'Entertainer'
         ),
         'ISTP' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ISTP',
+            'subconscious' => 'ENFJ',
+            'unconscious' => 'ESTJ',
+            'superego' => 'INFP',
+            'hero' => 'The Craftsman'
         ),
         'ESTP' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ESTP',
+            'subconscious' => 'INFJ',
+            'unconscious' => 'ISTJ',
+            'superego' => 'ENFP',
+            'hero' => 'The Entrepreneur'
         ),
         'ISFJ' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ISFJ',
+            'subconscious' => 'ENTP',
+            'unconscious' => 'ESFP',
+            'superego' => 'INTJ',
+            'hero' => 'The Loyal Defender'
         ),
         'ESFJ' => array(
             'ego' => 'ESFJ',
             'subconscious' => 'INTP',
             'unconscious' => 'ISFP',
             'superego' => 'ENTJ',
-            'hero' => ''
+            'hero' => 'The Caregiver'
         ),
         'ISTJ' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ISTJ',
+            'subconscious' => 'ENFP',
+            'unconscious' => 'ESTP',
+            'superego' => 'INFJ',
+            'hero' => 'The Disciplined Soldier'
         ),
         'ESTJ' => array(
-            'ego' => '',
-            'subconscious' => '',
-            'unconscious' => '',
-            'superego' => '',
-            'hero' => ''
+            'ego' => 'ESTJ',
+            'subconscious' => 'INFP',
+            'unconscious' => 'ISTP',
+            'superego' => 'ENFJ',
+            'hero' => 'The Boss'
         ),
     );
 
