@@ -13,14 +13,14 @@ class MBTI_logic_data extends ai_extended_logic
         ),
         'discord_contributors' => array(
             'tirone.png' => array( 'data' => 'Admin#9999' ),
-            'clover.jpeg' => array( 'data' => 'Clover#4704' ),
+            // 'clover.jpeg' => array( 'data' => 'Clover#4704' ),
             '69.png' => array( 'data' => '6un9#0408' ),
             'angel.png' => array( 'data' => 'Cyrus#3693' ),
             'stifler.png' => array( 'data' => 'StiflerCosmin#3659' )
         ),
         'primary_contributors' => array(
             'jack.png' => array( 'data' => '' ),
-            'clover.jpeg' => array( 'data' => '' ),
+            // 'clover.jpeg' => array( 'data' => '' ),
             'linda.png' => array( 'data' => '' )
         )
     );
@@ -105,112 +105,128 @@ class MBTI_logic_data extends ai_extended_logic
             'subconscious' => 'ESTJ',
             'unconscious' => 'ENFJ',
             'superego' => 'ISTP',
-            'hero' => 'The Healer'
+            'hero' => 'The Healer',
+            'description' => 'Moral and ethical people, with a yearning for a meaningful life.'
         ),
         'ENFP' => array(
             'ego' => 'ENFP',
             'subconscious' => 'ISTJ',
             'unconscious' => 'INFJ',
             'superego' => 'ESTP',
-            'hero' => 'The Storyteller'
+            'hero' => 'The Storyteller',
+            'description' => 'Outgoing and social people, who are known for their original and creative ideas.'
         ),
         'INFJ' => array(
             'ego' => 'INFJ',
             'subconscious' => 'ESTP',
             'unconscious' => 'ENFP',
             'superego' => 'ISTJ',
-            'hero' => 'The Wise Sage'
+            'hero' => 'The Wise Sage',
+            'description' => 'Creative and mystical, with a rare combination of vision and willpower.'
         ),
         'ENFJ' => array(
             'ego' => 'ENFJ',
             'subconscious' => 'ISTP',
             'unconscious' => 'INFP',
             'superego' => 'ESTJ',
-            'hero' => 'The Protagonist'
+            'hero' => 'The Protagonist',
+            'description' => 'Natural and charismatic leaders who value human relations and are always eager to help.'
         ),
         'INTJ' => array(
             'ego' => 'INTJ',
             'subconscious' => 'ESFP',
             'unconscious' => 'ENTP',
             'superego' => 'ISFJ',
-            'hero' => 'The Mastermind'
+            'hero' => 'The Mastermind',
+            'description' => 'Curious and critical thinkers, who value knowledge and logic.'
         ),
         'ENTJ' => array(
             'ego' => 'ENTJ',
             'subconscious' => 'ISFP',
             'unconscious' => 'INTP',
             'superego' => 'ESFJ',
-            'hero' => 'The Commander'
+            'hero' => 'The Commander',
+            'description' => 'Ambitious and visionary leaders, with a charisma that inspires others.'
         ),
         'INTP' => array(
             'ego' => 'INTP',
             'subconscious' => 'ESFJ',
             'unconscious' => 'ENTJ',
             'superego' => 'ISFP',
-            'hero' => 'The Logical Thinker'
+            'hero' => 'The Logical Thinker',
+            'description' => 'Ingenious inventors with rare insights about the world.'
         ),
         'ENTP' => array(
             'ego' => 'ENTP',
             'subconscious' => 'ISFJ',
             'unconscious' => 'ESFP',
             'superego' => 'INTJ',
-            'hero' => 'The Creative Inventor'
+            'hero' => 'The Creative Inventor',
+            'description' => 'Talented thinkers with a love for challenges.'
         ),
         'ISFP' => array(
             'ego' => 'ISFP',
             'subconscious' => 'ENTJ',
             'unconscious' => 'ESFJ',
             'superego' => 'INTP',
-            'hero' => 'The Adventurer'
+            'hero' => 'The Adventurer',
+            'description' => 'Doers with an appreciation for beautiful things, who love exploration and travel.'
         ),
         'ESFP' => array(
             'ego' => 'ESFP',
             'subconscious' => 'INTJ',
             'unconscious' => 'ISFJ',
             'superego' => 'ENTP',
-            'hero' => 'Entertainer'
+            'hero' => 'Entertainer',
+            'description' => 'Playful, social and energetic people, who are often the life of the party.'
         ),
         'ISTP' => array(
             'ego' => 'ISTP',
             'subconscious' => 'ENFJ',
             'unconscious' => 'ESTJ',
             'superego' => 'INFP',
-            'hero' => 'The Craftsman'
+            'hero' => 'The Craftsman',
+            'description' => 'Curious and logical analyzers, with a mastery of all kinds of tools.'
         ),
         'ESTP' => array(
             'ego' => 'ESTP',
             'subconscious' => 'INFJ',
             'unconscious' => 'ISTJ',
             'superego' => 'ENFP',
-            'hero' => 'The Entrepreneur'
+            'hero' => 'The Entrepreneur',
+            'description' => 'Cheerful and charming folks, with a practical mind and an eye for details.'
         ),
         'ISFJ' => array(
             'ego' => 'ISFJ',
             'subconscious' => 'ENTP',
             'unconscious' => 'ESFP',
             'superego' => 'INTJ',
-            'hero' => 'The Loyal Defender'
+            'hero' => 'The Loyal Defender',
+            'description' => 'Ethical, kind and reliable protectors, who take responsibilities seriously.'
         ),
         'ESFJ' => array(
             'ego' => 'ESFJ',
             'subconscious' => 'INTP',
             'unconscious' => 'ISFP',
             'superego' => 'ENTJ',
-            'hero' => 'The Caregiver'
+            'hero' => 'The Caregiver',
+            'description' => 'Traditional and reliable folks, who always want to help others.'
         ),
         'ISTJ' => array(
             'ego' => 'ISTJ',
             'subconscious' => 'ENFP',
             'unconscious' => 'ESTP',
             'superego' => 'INFJ',
-            'hero' => 'The Disciplined Soldier'
+            'hero' => 'The Disciplined Soldier',
+            'description' => 'Loyal, honest and reliable individuals, who can dedicate a lot to achieve their goals.'
         ),
         'ESTJ' => array(
             'ego' => 'ESTJ',
             'subconscious' => 'INFP',
             'unconscious' => 'ISTP',
             'superego' => 'ENFJ',
-            'hero' => 'The Boss'
+            'hero' => 'The Boss',
+            'description' => 'Hardworking and visionary leaders, with a knack for managing people'
         ),
     );
 
