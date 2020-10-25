@@ -13,14 +13,12 @@ class MBTI_logic_data extends ai_extended_logic
         ),
         'discord_contributors' => array(
             'tirone.png' => array( 'data' => 'Admin#9999' ),
-            // 'clover.jpeg' => array( 'data' => 'Clover#4704' ),
             '69.png' => array( 'data' => '6un9#0408' ),
             'angel.png' => array( 'data' => 'Cyrus#3693' ),
             'stifler.png' => array( 'data' => 'StiflerCosmin#3659' )
         ),
         'primary_contributors' => array(
             'jack.png' => array( 'data' => '' ),
-            // 'clover.jpeg' => array( 'data' => '' ),
             'linda.png' => array( 'data' => '' )
         )
     );
@@ -62,11 +60,11 @@ class MBTI_logic_data extends ai_extended_logic
     public static $personality_compatibility = array(
         'INFP' => array( 4, 4, 5, 5, 4, 5, 4, 4, 1, 1, 1, 1, 2, 2, 2, 2 ),
         'ENFP' => array( 4, 4, 5, 4, 5, 4, 4, 4, 1, 1, 1, 1, 2, 2, 2, 2 ),
-        'INFJ' => array( 5, 5, 4, 4, 4, 4, 5, 5, 2, 2, 1, 1, 2, 2, 2, 2 ),
+        'INFJ' => array( 5, 5, 4, 4, 4, 4, 1, 5, 2, 2, 1, 1, 2, 2, 2, 2 ),
         'ENFJ' => array( 5, 4, 4, 4, 4, 4, 4, 4, 5, 1, 1, 1, 2, 2, 2, 2 ),
         'INTJ' => array( 4, 5, 4, 4, 4, 4, 5, 5, 3, 3, 3, 3, 2, 2, 2, 2 ),
         'ENTJ' => array( 5, 4, 4, 4, 4, 4, 5, 4, 3, 3, 3, 3, 3, 3, 3, 3 ),
-        'INTP' => array( 4, 4, 5, 4, 5, 5, 4, 4, 3, 3, 3, 3, 2, 2, 2, 5 ),
+        'INTP' => array( 4, 4, 1, 4, 5, 5, 4, 4, 3, 3, 3, 3, 2, 2, 2, 5 ),
         'ENTP' => array( 4, 4, 5, 4, 5, 4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2 ),
         'ISFP' => array( 1, 1, 2, 5, 3, 3, 3, 3, 2, 2, 2, 2, 3, 5, 3, 5 ),
         'ESFP' => array( 1, 1, 2, 1, 3, 3, 3, 3, 2, 2, 2, 2, 5, 3, 5, 3 ),
@@ -77,6 +75,25 @@ class MBTI_logic_data extends ai_extended_logic
         'ISTJ' => array( 2, 2, 2, 2, 2, 3, 2, 2, 3, 5, 3, 5, 4, 4, 4, 4 ),
         'ESTJ' => array( 2, 2, 2, 2, 2, 3, 5, 2, 5, 3, 5, 3, 4, 4, 4, 4 ),
     );
+
+    // public static $personality_compatibility = array(
+    //     'INFP' => array( 4, 4, 5, 5, 4, 4, 4, 4, 1, 1, 4, 4, 4, 5, 2, 2 ),
+    //     'ENFP' => array( 4, 4, 5, 4, 5, 4, 4, 4, 1, 1, 1, 1, 2, 2, 2, 2 ),
+    //     'INFJ' => array( 5, 5, 4, 4, 4, 4, 5, 5, 2, 2, 1, 1, 2, 2, 2, 2 ),
+    //     'ENFJ' => array( 5, 4, 4, 4, 4, 4, 4, 4, 5, 1, 1, 1, 2, 2, 2, 2 ),
+    //     'INTJ' => array( 4, 5, 4, 4, 4, 4, 5, 5, 3, 3, 3, 3, 2, 2, 2, 2 ),
+    //     'ENTJ' => array( 5, 4, 4, 4, 4, 4, 5, 4, 3, 3, 3, 3, 3, 3, 3, 3 ),
+    //     'INTP' => array( 4, 4, 5, 4, 5, 5, 4, 4, 3, 3, 3, 3, 2, 2, 2, 5 ),
+    //     'ENTP' => array( 4, 4, 5, 4, 5, 4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2 ),
+    //     'ISFP' => array( 1, 1, 2, 5, 3, 3, 3, 3, 2, 2, 2, 2, 3, 5, 3, 5 ),
+    //     'ESFP' => array( 1, 1, 2, 1, 3, 3, 3, 3, 2, 2, 2, 2, 5, 3, 5, 3 ),
+    //     'ISTP' => array( 1, 1, 4, 1, 3, 3, 3, 3, 2, 2, 2, 2, 3, 5, 3, 5 ),
+    //     'ESTP' => array( 1, 1, 4, 1, 3, 3, 3, 3, 2, 2, 2, 2, 5, 3, 5, 3 ),
+    //     'ISFJ' => array( 2, 2, 4, 2, 2, 3, 2, 2, 3, 5, 3, 5, 4, 4, 4, 4 ),
+    //     'ESFJ' => array( 2, 2, 5, 2, 2, 3, 2, 2, 5, 3, 5, 3, 4, 4, 4, 4 ),
+    //     'ISTJ' => array( 2, 2, 2, 2, 2, 3, 2, 2, 3, 5, 3, 5, 4, 4, 4, 4 ),
+    //     'ESTJ' => array( 2, 2, 2, 2, 2, 3, 5, 2, 5, 3, 5, 3, 4, 4, 4, 4 ),
+    // );
 
     public static $personality_traits = array(
         'INTP' => array( 'ti', 'ne', 'si', 'fe', 'te', 'ni', 'se', 'fi', 'fe', 'si', 'ne', 'ti', 'fi', 'se', 'ni', 'te' ),
