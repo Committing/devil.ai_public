@@ -12,6 +12,7 @@ Prediction logic for personality Myers Briggs results.
 
 ## Data
 > ./MBTI.ai_logic_data.class.php
+
 > ./logic_calculation_data.class.php
 
 Partial data for the website including data for calculation of personality type.
