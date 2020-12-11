@@ -59,11 +59,11 @@ class MBTI_logic_data extends ai_extended_logic
     public static $personality_compatibility = array(
         'INFP' => array( 4, 4, 5, 5, 4, 5, 4, 4, 1, 1, 1, 1, 2, 2, 2, 2 ),
         'ENFP' => array( 4, 4, 5, 4, 5, 4, 4, 4, 1, 1, 1, 1, 2, 2, 2, 2 ),
-        'INFJ' => array( 5, 5, 4, 4, 4, 4, 1, 5, 2, 2, 1, 1, 2, 2, 2, 2 ),
+        'INFJ' => array( 5, 5, 4, 4, 4, 4, 5, 5, 2, 2, 1, 1, 2, 2, 2, 2 ),
         'ENFJ' => array( 5, 4, 4, 4, 4, 4, 4, 4, 5, 1, 1, 1, 2, 2, 2, 2 ),
         'INTJ' => array( 4, 5, 4, 4, 4, 4, 5, 5, 3, 3, 3, 3, 2, 2, 2, 2 ),
         'ENTJ' => array( 5, 4, 4, 4, 4, 4, 5, 4, 3, 3, 3, 3, 3, 3, 3, 3 ),
-        'INTP' => array( 4, 4, 1, 4, 5, 5, 4, 4, 3, 3, 3, 3, 2, 2, 2, 5 ),
+        'INTP' => array( 4, 4, 5, 4, 5, 5, 4, 4, 3, 3, 3, 3, 2, 2, 2, 5 ),
         'ENTP' => array( 4, 4, 5, 4, 5, 4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2 ),
         'ISFP' => array( 1, 1, 2, 5, 3, 3, 3, 3, 2, 2, 2, 2, 3, 5, 3, 5 ),
         'ESFP' => array( 1, 1, 2, 1, 3, 3, 3, 3, 2, 2, 2, 2, 5, 3, 5, 3 ),
@@ -122,7 +122,23 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ENFJ',
             'superego' => 'ISTP',
             'hero' => 'The Healer',
-            'description' => 'Moral and ethical people, with a yearning for a meaningful life.'
+            'description' => 'Moral and ethical people, with a yearning for a meaningful life.',
+            'jobs' => array(
+                'Biology',
+                'Business Administration',
+                'Catholic Studies',
+                'Communication and Journalism',
+                'Education',
+                'English',
+                'Family Studies',
+                'History',
+                'Human Resources Management',
+                'Music',
+                'Psychology',
+                'Social Work',
+                'Sociology',
+                'Theology'
+            )
         ),
         'ENFP' => array(
             'ego' => 'ENFP',
@@ -130,7 +146,20 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'INFJ',
             'superego' => 'ESTP',
             'hero' => 'The Storyteller',
-            'description' => 'Outgoing and social people, who are known for their original and creative ideas.'
+            'description' => 'Outgoing and social people, who are known for their original and creative ideas.',
+            'jobs' => array(
+                'Actuarial Science',
+                'Business Administration',
+                'Chemestry and Journalism',
+                'Computer Sciences',
+                'Criminal Justice',
+                'English',
+                'Marketing',
+                'Political Science',
+                'Psychology',
+                'Social Work',
+                'Sociology'
+            )
         ),
         'INFJ' => array(
             'ego' => 'INFJ',
@@ -138,7 +167,20 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ENFP',
             'superego' => 'ISTJ',
             'hero' => 'The Wise Sage',
-            'description' => 'Creative and mystical, with a rare combination of vision and willpower.'
+            'description' => 'Creative and mystical, with a rare combination of vision and willpower.',
+            'jobs' => array(
+                'Catholic Studies',
+                'Communication and Journalism',
+                'Criminal Justice',
+                'Education',
+                'English',
+                'Family Studies',
+                'History',
+                'Psychology',
+                'Social Work',
+                'Theology',
+                'Urban Studies'
+            )
         ),
         'ENFJ' => array(
             'ego' => 'ENFJ',
@@ -146,7 +188,24 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'INFP',
             'superego' => 'ESTJ',
             'hero' => 'The Protagonist',
-            'description' => 'Natural and charismatic leaders who value human relations and are always eager to help.'
+            'description' => 'Natural and charismatic leaders who value human relations and are always eager to help.',
+            'jobs' => array(
+                'Business Administration',
+                'Catholic Studies',
+                'Communication and Journalism',
+                'Criminal Justice',
+                'Education',
+                'English',
+                'Family Studies',
+                'Human Recources Management',
+                'Music',
+                'Political Science',
+                'Psychology',
+                'Social Work',
+                'Sociology',
+                'Theology',
+                'Urban Studies'
+            )
         ),
         'INTJ' => array(
             'ego' => 'INTJ',
@@ -154,7 +213,28 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ENTP',
             'superego' => 'ISFJ',
             'hero' => 'The Mastermind',
-            'description' => 'Curious and critical thinkers, who value knowledge and logic.'
+            'description' => 'Curious and critical thinkers, who value knowledge and logic.',
+            'jobs' => array(
+                'Biochemistry',
+                'Biology',
+                'Business Administration',
+                'Catholic Studdies',
+                'Chemistry',
+                'Communication and Jounalism',
+                'Computer Sciences',
+                'Criminal Justice',
+                'Economics',
+                'Education',
+                'Finance',
+                'Geology',
+                'Health and Human Preformance',
+                'International Business',
+                'Mathematices',
+                'Physics',
+                'Psychology',
+                'Sociology',
+                'Theology'
+            )
         ),
         'ENTJ' => array(
             'ego' => 'ENTJ',
@@ -162,7 +242,25 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'INTP',
             'superego' => 'ESFJ',
             'hero' => 'The Commander',
-            'description' => 'Ambitious and visionary leaders, with a charisma that inspires others.'
+            'description' => 'Ambitious and visionary leaders, with a charisma that inspires others.',
+            'jobs' => array(
+                'Accounting',
+                'Biology',
+                'Business Administration',
+                'Catholic Studies',
+                'Chemistry',
+                'Communication and Journalism',
+                'Computer Sciences',
+                'Criminal Justic',
+                'Economics',
+                'Education',
+                'Finance',
+                'Human Resources Management',
+                'Marketing',
+                'Political Science',
+                'Sociology',
+                'theology'
+            )
         ),
         'INTP' => array(
             'ego' => 'INTP',
@@ -170,7 +268,28 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ENTJ',
             'superego' => 'ISFP',
             'hero' => 'The Logical Thinker',
-            'description' => 'Ingenious inventors with rare insights about the world.'
+            'description' => 'Ingenious inventors with rare insights about the world.',
+            'jobs' => array(
+                'Biochemistry',
+                'Biology',
+                'Business Administration',
+                'Chemistry',
+                'Communication and Journalism',
+                'Computer Sciences',
+                'Criminal Justice',
+                'Economics',
+                'Engineering',
+                'Finance',
+                'Geology',
+                'History',
+                'Mathematics',
+                'Music',
+                'Philosophy',
+                'Physics',
+                'Psychology',
+                'Sociology',
+                'Statistics'
+            )
         ),
         'ENTP' => array(
             'ego' => 'ENTP',
@@ -178,7 +297,22 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ESFP',
             'superego' => 'INTJ',
             'hero' => 'The Creative Inventor',
-            'description' => 'Talented thinkers with a love for challenges.'
+            'description' => 'Talented thinkers with a love for challenges.',
+            'jobs' => array(
+                'Business Administration',
+                'Communication and Journalism',
+                'Computer Sciences',
+                'Criminal Justice',
+                'Economics',
+                'Finance',
+                'Geography',
+                'History',
+                'International Business',
+                'Marketing',
+                'Political Science',
+                'Psychology',
+                'Urban Studies'
+            )
         ),
         'ISFP' => array(
             'ego' => 'ISFP',
@@ -186,7 +320,18 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ESFJ',
             'superego' => 'INTP',
             'hero' => 'The Adventurer',
-            'description' => 'Doers with an appreciation for beautiful things, who love exploration and travel.'
+            'description' => 'Doers with an appreciation for beautiful things, who love exploration and travel.',
+            'jobs' => array(
+                'Biology',
+                'Computer Sciences',
+                'Criminal Justice',
+                'Education',
+                'Enviromental Science',
+                'Geology',
+                'History',
+                'Music',
+                'Social Work'
+            )
         ),
         'ESFP' => array(
             'ego' => 'ESFP',
@@ -194,7 +339,20 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ISFJ',
             'superego' => 'ENTP',
             'hero' => 'Entertainer',
-            'description' => 'Playful, social and energetic people, who are often the life of the party.'
+            'description' => 'Playful, social and energetic people, who are often the life of the party.',
+            'jobs' => array(
+                'Criminal Justice',
+                'Education',
+                'Family Studies',
+                'Geology',
+                'Health and Human Preformance',
+                'Human Recources Management',
+                'Music',
+                'Political Science',
+                'Psychology',
+                'Social Work',
+                'Sociology'
+            )
         ),
         'ISTP' => array(
             'ego' => 'ISTP',
@@ -202,7 +360,20 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ESTJ',
             'superego' => 'INFP',
             'hero' => 'The Craftsman',
-            'description' => 'Curious and logical analyzers, with a mastery of all kinds of tools.'
+            'description' => 'Curious and logical analyzers, with a mastery of all kinds of tools.',
+            'jobs' => array(
+                'Biology',
+                'Business Administration',
+                'Computer Sciences',
+                'Criminal Justice',
+                'Economics',
+                'Education',
+                'Engineering',
+                'Finance',
+                'Geology',
+                'Health and Human Preformance',
+                'Mathmatics'
+            )
         ),
         'ESTP' => array(
             'ego' => 'ESTP',
@@ -210,7 +381,18 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ISTJ',
             'superego' => 'ENFP',
             'hero' => 'The Entrepreneur',
-            'description' => 'Cheerful and charming folks, with a practical mind and an eye for details.'
+            'description' => 'Cheerful and charming folks, with a practical mind and an eye for details.',
+            'jobs' => array(
+                'Biology',
+                'Communication and Journalism',
+                'Computer Sciences',
+                'Criminal Justice',
+                'Education',
+                'Entrepreneurship',
+                'Finance',
+                'Marketing',
+                'Music'
+            )
         ),
         'ISFJ' => array(
             'ego' => 'ISFJ',
@@ -218,7 +400,21 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ESFP',
             'superego' => 'INTJ',
             'hero' => 'The Loyal Defender',
-            'description' => 'Ethical, kind and reliable protectors, who take responsibilities seriously.'
+            'description' => 'Ethical, kind and reliable protectors, who take responsibilities seriously.',
+            'jobs' => array(
+                'Biochemistry',
+                'Biology',
+                'Catholic Studies',
+                'Computer Sciences',
+                'Criminal Justice',
+                'Education',
+                'Finance',
+                'History',
+                'Music',
+                'Psychology',
+                'Social Work',
+                'Theology'
+            )
         ),
         'ESFJ' => array(
             'ego' => 'ESFJ',
@@ -226,7 +422,20 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ISFP',
             'superego' => 'ENTJ',
             'hero' => 'The Caregiver',
-            'description' => 'Traditional and reliable folks, who always want to help others.'
+            'description' => 'Traditional and reliable folks, who always want to help others.',
+            'jobs' => array(
+                'Accounting',
+                'Catholic Studies',
+                'Chemestry',
+                'Criminal Justice',
+                'Education',
+                'Family Studies',
+                'Health and Human Preformance',
+                'Marketing',
+                'Psychology',
+                'Social Work',
+                'Theology'
+            )
         ),
         'ISTJ' => array(
             'ego' => 'ISTJ',
@@ -234,7 +443,19 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ESTP',
             'superego' => 'INFJ',
             'hero' => 'The Disciplined Soldier',
-            'description' => 'Loyal, honest and reliable individuals, who can dedicate a lot to achieve their goals.'
+            'description' => 'Loyal, honest and reliable individuals, who can dedicate a lot to achieve their goals.',
+            'jobs' => array(
+                'Accounting',
+                'Biology',
+                'Business Administration',
+                'Communication and Journalosm',
+                'Computer Sciences',
+                'Criminal Justice',
+                'Education',
+                'English',
+                'Finance',
+                'Geology'
+            )
         ),
         'ESTJ' => array(
             'ego' => 'ESTJ',
@@ -242,11 +463,24 @@ class MBTI_logic_data extends ai_extended_logic
             'unconscious' => 'ISTP',
             'superego' => 'ENFJ',
             'hero' => 'The Boss',
-            'description' => 'Hardworking and visionary leaders, with a knack for managing people'
+            'description' => 'Hardworking and visionary leaders, with a knack for managing people',
+            'jobs' => array(
+                'Accounting',
+                'Actuarial Science',
+                'Business Administration',
+                'Catholic Studies',
+                'Criminal Justice',
+                'Finance',
+                'Justice and Peace Studies',
+                'Secondary Education',
+                'Social Work',
+                'Theology'
+            )
         ),
     );
 
     
+
     // Legacy
     public static $trait_personality_links = array(
         'fe' => array(
