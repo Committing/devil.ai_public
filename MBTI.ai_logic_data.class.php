@@ -113,6 +113,12 @@ class MBTI_logic_data extends ai_extended_logic
         'INFP' => array( 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti', 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe' )
     );
 
+    public static $trait_relation = array(
+        'f' => 't',
+        'n' => 's',
+        's' => 'n',
+        't' => 'f'
+    );
 
 
     public static $personality_data = array(
@@ -294,8 +300,8 @@ class MBTI_logic_data extends ai_extended_logic
         'ENTP' => array(
             'ego' => 'ENTP',
             'subconscious' => 'ISFJ',
-            'unconscious' => 'ESFP',
-            'superego' => 'INTJ',
+            'unconscious' => 'INTJ',
+            'superego' => 'ESFP',
             'hero' => 'The Creative Inventor',
             'description' => 'Talented thinkers with a love for challenges.',
             'jobs' => array(
