@@ -140,28 +140,28 @@ class ai_extended_logic extends logic_calculation_data
 
         $data['ordered'] = array(
             'f' => array(
-                'conscious_trait' => ($traits['fe'] > $traits['fi'] ? 'fe' : 'fi'),
-                'conscious_value' => ($traits['fe'] > $traits['fi'] ? $traits['fe'] : $traits['fi']),
-                'shadow_trait' =>    ($traits['fe'] > $traits['fi'] ? 'fi' : 'fe'),
-                'shadow_value' =>    ($traits['fe'] > $traits['fi'] ? $traits['fi'] : $traits['fe']),
+                'conscious_trait' => (@$traits['fe'] > @$traits['fi'] ? 'fe' : 'fi'),
+                'conscious_value' => (@$traits['fe'] > @$traits['fi'] ? @$traits['fe'] : @$traits['fi']),
+                'shadow_trait' =>    (@$traits['fe'] > @$traits['fi'] ? 'fi' : 'fe'),
+                'shadow_value' =>    (@$traits['fe'] > @$traits['fi'] ? @$traits['fi'] : @$traits['fe']),
             ),
             'n' => array(
-                'conscious_trait' => ($traits['ne'] > $traits['ni'] ? 'ne' : 'ni'),
-                'conscious_value' => ($traits['ne'] > $traits['ni'] ? $traits['ne'] : $traits['ni']),
-                'shadow_trait' =>    ($traits['ne'] > $traits['ni'] ? 'ni' : 'ne'),
-                'shadow_value' =>    ($traits['ne'] > $traits['ni'] ? $traits['ni'] : $traits['ne']),
+                'conscious_trait' => (@$traits['ne'] > @$traits['ni'] ? 'ne' : 'ni'),
+                'conscious_value' => (@$traits['ne'] > @$traits['ni'] ? @$traits['ne'] : @$traits['ni']),
+                'shadow_trait' =>    (@$traits['ne'] > @$traits['ni'] ? 'ni' : 'ne'),
+                'shadow_value' =>    (@$traits['ne'] > @$traits['ni'] ? @$traits['ni'] : @$traits['ne']),
             ),
             's' => array(
-                'conscious_trait' => ($traits['se'] > $traits['si'] ? 'se' : 'si'),
-                'conscious_value' => ($traits['se'] > $traits['si'] ? $traits['se'] : $traits['si']),
-                'shadow_trait' =>    ($traits['se'] > $traits['si'] ? 'si' : 'se'),
-                'shadow_value' =>    ($traits['se'] > $traits['si'] ? $traits['si'] : $traits['se']),
+                'conscious_trait' => (@$traits['se'] > @$traits['si'] ? 'se' : 'si'),
+                'conscious_value' => (@$traits['se'] > @$traits['si'] ? @$traits['se'] : @$traits['si']),
+                'shadow_trait' =>    (@$traits['se'] > @$traits['si'] ? 'si' : 'se'),
+                'shadow_value' =>    (@$traits['se'] > @$traits['si'] ? @$traits['si'] : @$traits['se']),
             ),
             't' => array(
-                'conscious_trait' => ($traits['te'] > $traits['ti'] ? 'te' : 'ti'),
-                'conscious_value' => ($traits['te'] > $traits['ti'] ? $traits['te'] : $traits['ti']),
-                'shadow_trait' =>    ($traits['te'] > $traits['ti'] ? 'ti' : 'te'),
-                'shadow_value' =>    ($traits['te'] > $traits['ti'] ? $traits['ti'] : $traits['te']),
+                'conscious_trait' => (@$traits['te'] > @$traits['ti'] ? 'te' : 'ti'),
+                'conscious_value' => (@$traits['te'] > @$traits['ti'] ? @$traits['te'] : @$traits['ti']),
+                'shadow_trait' =>    (@$traits['te'] > @$traits['ti'] ? 'ti' : 'te'),
+                'shadow_value' =>    (@$traits['te'] > @$traits['ti'] ? @$traits['ti'] : @$traits['te']),
             )
         );
 
@@ -213,6 +213,8 @@ class ai_extended_logic extends logic_calculation_data
         }
 
         arsort($data['predictions']);
+
+        global_logger('Results: ' . print_r($data['predictions'], true));
 
         $data['further_predictions'] = self::furtherPredictions($data);
 
