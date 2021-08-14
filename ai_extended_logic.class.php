@@ -130,7 +130,7 @@ class ai_extended_logic extends logic_calculation_data
      *      )
      * @return array Personality predictions
      */
-    public static function predictPersonality($traits)
+    public static function predictPersonality($traits, $log = true)
     {
         arsort($traits);
 
@@ -214,7 +214,9 @@ class ai_extended_logic extends logic_calculation_data
 
         arsort($data['predictions']);
 
-        global_logger('Results: ' . print_r($data['predictions'], true));
+        if ($log === true) {
+            global_logger('Results: ' . print_r($data['predictions'], true));
+        }
 
         $data['further_predictions'] = self::furtherPredictions($data);
 
