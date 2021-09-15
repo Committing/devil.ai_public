@@ -161,7 +161,6 @@ class MBTI_logic_data extends ai_extended_logic
                 'Criminal Justice',
                 'English',
                 'Marketing',
-                'Political Science',
                 'Psychology',
                 'Social Work',
                 'Sociology'
@@ -496,8 +495,8 @@ class MBTI_logic_data extends ai_extended_logic
             'INFJ' => 0.75,
             'ESTP' => 0.25,
             'ENTP' => 0.25,
-            'ISTP' => -0.25,
-            'INTP' => -0.25
+            'ISTP' => -0.125,
+            'INTP' => -0.125,
         ),
         'fi' => array(
             'ISTP' => 1.25,
@@ -506,12 +505,12 @@ class MBTI_logic_data extends ai_extended_logic
             'ENFP' => 0.75,
             'ISTJ' => 0.25,
             'INTJ' => 0.25,
-            'ESTJ' => -0.25,
-            'ENTJ' => -0.25
+            'ESTJ' => -0.125,
+            'ENTJ' => -0.125,
         ),
         'ne' => array(
-            'ISFJ' => -0.25,
-            'ISTJ' => -0.25,
+            'ISFJ' => -0.125,
+            'ISTJ' => -0.125,
             'ESFJ' => 0.25,
             'ESTJ' => 0.25,
             'INFP' => 0.75,
@@ -520,8 +519,8 @@ class MBTI_logic_data extends ai_extended_logic
             'ENTP' => 1.25,
         ),
         'ni' => array(
-            'ESFP' => -0.25,
-            'ESTP' => -0.25,
+            'ESFP' => -0.125,
+            'ESTP' => -0.125,
             'ISFP' => 0.25,
             'ISTP' => 0.25,
             'ENFJ' => 0.75,
@@ -530,8 +529,8 @@ class MBTI_logic_data extends ai_extended_logic
             'INTJ' => 1.25
         ),
         'te' => array(
-            'ISFP' => -0.25,
-            'INFP' => -0.25,
+            'ISFP' => -0.125,
+            'INFP' => -0.125,
             'ENFP' => 0.25,
             'ESFP' => 0.25,
             'INTJ' => 0.75,
@@ -540,8 +539,8 @@ class MBTI_logic_data extends ai_extended_logic
             'ESTJ' => 1.25
         ),
         'ti' => array(
-            'ESFJ' => -0.25,
-            'ENFJ' => -0.25,
+            'ESFJ' => -0.125,
+            'ENFJ' => -0.125,
             'INFJ' => 0.25,
             'ISFJ' => 0.25,
             'ENTP' => 0.75,
@@ -550,8 +549,8 @@ class MBTI_logic_data extends ai_extended_logic
             'ISTP' => 1.25
         ),
         'se' => array(
-            'INFJ' => -0.25,
-            'INTJ' => -0.25,
+            'INFJ' => -0.125,
+            'INTJ' => -0.125,
             'ENFJ' => 0.25,
             'ENTJ' => 0.25,
             'ISFP' => 0.75,
@@ -560,8 +559,8 @@ class MBTI_logic_data extends ai_extended_logic
             'ESTP' => 1.25
         ),
         'si' => array(
-            'ENFP' => -0.25,
-            'ENTP' => -0.25,
+            'ENFP' => -0.125,
+            'ENTP' => -0.125,
             'INFP' => 0.25,
             'INTP' => 0.25,
             'ESFJ' => 0.75,
