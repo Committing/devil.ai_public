@@ -13,12 +13,9 @@ class MBTI_logic_data extends ai_extended_logic
         ),
         'discord_contributors' => array(
             'tirone.png' => array( 'data' => 'Admin#9999' ),
-            'angel.png' => array( 'data' => 'Cyrus#3693' ),
-            'stifler.png' => array( 'data' => 'StiflerCosmin#3659' )
         ),
         'primary_contributors' => array(
             'jack.png' => array( 'data' => '' )
-            // 'linda.png' => array( 'data' => '' )
         )
     );
 
