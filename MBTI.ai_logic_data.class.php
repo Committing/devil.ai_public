@@ -15,7 +15,7 @@ class MBTI_logic_data extends ai_extended_logic
             'tirone.png' => array( 'data' => 'Admin#9999' ),
         ),
         'primary_contributors' => array(
-            'jack.png' => array( 'data' => '' )
+            'meu.jpg' => array( 'data' => '' )
         )
     );
 
