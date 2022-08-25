@@ -192,22 +192,22 @@ class ai_extended_logic extends logic_calculation_data
 
             if ($data['order_shadow']['nemesis']['trait'] == $var[4]) {
                 $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' high shadow trait.';
+                $data['debug'][] = 'Matching ' . $key . ' high unconscious trait.';
             }
 
             if ($data['order_shadow']['critic']['trait'] == $var[5]) {
                 $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' second highest shadow trait.';
+                $data['debug'][] = 'Matching ' . $key . ' second highest unconscious trait.';
             }
 
             if ($data['order_shadow']['trickster']['trait'] == $var[6]) {
                 $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' second lowest shadow trait.';
+                $data['debug'][] = 'Matching ' . $key . ' second lowest unconscious trait.';
             }
 
             if ($data['order_shadow']['demon']['trait'] == $var[7]) {
                 $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' lowest shadow trait.';
+                $data['debug'][] = 'Matching ' . $key . ' lowest unconscious trait.';
             }
 
         }
