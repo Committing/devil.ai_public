@@ -28,41 +28,33 @@ class MBTI_logic_data extends ai_extended_logic
     );
 
     public static $personality_type_probabilities = array(
-        'SP' => array(
-            'ESFP' => array('all' => 0.11, 'male' => 0.08, 'female' => 0.14),
-            'ESTP' => array('all' => 0.1, 'male' => 0.125, 'female' => 0.075),
-            'ISFP' => array('all' => 0.06, 'male' => 0.05, 'female' => 0.07),
-            'ISTP' => array('all' => 0.06, 'male' => 0.085, 'female' => 0.035)
-        ),
-        'SJ' => array(
-            'ESFJ' => array('all' => 0.12, 'male' => 0.07, 'female' => 0.17),
-            'ESTJ' => array('all' => 0.13, 'male' => 0.16, 'female' => 0.1),
-            'ISFJ' => array('all' => 0.07, 'male' => 0.04, 'female' => 0.1),
-            'ISTJ' => array('all' => 0.085, 'male' => 0.105, 'female' => 0.065)
-        ),
-        'NF' => array(
-            'ENFP' => array('all' => 0.07, 'male' => 0.06, 'female' => 0.08),
-            'ENFJ' => array('all' => 0.04, 'male' => 0.025, 'female' => 0.055),
-            'INFP' => array('all' => 0.02, 'male' => 0.015, 'female' => 0.025),
-            'INFJ' => array('all' => 0.01, 'male' => 0.005, 'female' => 0.015)
-        ),
-        'NT' => array(
-            'ENTP' => array('all' => 0.045, 'male' => 0.06, 'female' => 0.03),
-            'ENTJ' => array('all' => 0.04, 'male' => 0.055, 'female' => 0.025),
-            'INTP' => array('all' => 0.025, 'male' => 0.04, 'female' => 0.01),
-            'INTJ' => array('all' => 0.015, 'male' => 0.025, 'female' => 0.005)
-        )
+        'ESTJ' => array('all' => 0.13, 'male' => 0.16, 'female' => 0.1),
+        'ISTJ' => array('all' => 0.085, 'male' => 0.105, 'female' => 0.065),
+        'ESTP' => array('all' => 0.1, 'male' => 0.125, 'female' => 0.075),
+        'ISTP' => array('all' => 0.06, 'male' => 0.085, 'female' => 0.035),
+        'ESFP' => array('all' => 0.11, 'male' => 0.08, 'female' => 0.14),
+        'ISFP' => array('all' => 0.06, 'male' => 0.05, 'female' => 0.07),
+        'ESFJ' => array('all' => 0.12, 'male' => 0.07, 'female' => 0.17),
+        'ISFJ' => array('all' => 0.07, 'male' => 0.04, 'female' => 0.1),
+        'ENTP' => array('all' => 0.045, 'male' => 0.06, 'female' => 0.03),
+        'INTP' => array('all' => 0.025, 'male' => 0.04, 'female' => 0.01),
+        'ENTJ' => array('all' => 0.04, 'male' => 0.055, 'female' => 0.025),
+        'INTJ' => array('all' => 0.015, 'male' => 0.025, 'female' => 0.005),
+        'ENFJ' => array('all' => 0.04, 'male' => 0.025, 'female' => 0.055),
+        'INFJ' => array('all' => 0.01, 'male' => 0.005, 'female' => 0.015),
+        'ENFP' => array('all' => 0.07, 'male' => 0.06, 'female' => 0.08),
+        'INFP' => array('all' => 0.02, 'male' => 0.015, 'female' => 0.025),
     );
 
     public static $personality_compatibility = array(
         'INFP' => array( 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2 ),
         'ENFP' => array( 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5 ),
-        'INTP' => array( 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5, 5 ),
-        'ENTP' => array( 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5, 5, 5 ),
-        'INFJ' => array( 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 2, 5, 5, 5, 5 ),
-        'ENFJ' => array( 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 2, 5, 5, 5, 5, 5 ),
-        'INTJ' => array( 5, 5, 5, 5, 5, 5, 4, 5, 5, 2, 5, 5, 5, 5, 5, 5 ),
-        'ENTJ' => array( 5, 5, 5, 5, 5, 5, 5, 4, 2, 5, 5, 5, 5, 5, 5, 5 ),
+        'INFJ' => array( 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5, 5 ),
+        'ENFJ' => array( 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5, 5, 5 ),
+        'INTJ' => array( 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 2, 5, 5, 5, 5 ),
+        'ENTJ' => array( 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 2, 5, 5, 5, 5, 5 ),
+        'INTP' => array( 5, 5, 5, 5, 5, 5, 4, 5, 5, 2, 5, 5, 5, 5, 5, 5 ),
+        'ENTP' => array( 5, 5, 5, 5, 5, 5, 5, 4, 2, 5, 5, 5, 5, 5, 5, 5 ),
         'ISFJ' => array( 5, 5, 5, 5, 5, 5, 5, 2, 4, 5, 5, 5, 5, 5, 5, 5 ),
         'ESFJ' => array( 5, 5, 5, 5, 5, 5, 2, 5, 5, 4, 5, 5, 5, 5, 5, 5 ),
         'ISFP' => array( 5, 5, 5, 5, 5, 2, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5 ),
@@ -93,23 +85,43 @@ class MBTI_logic_data extends ai_extended_logic
     // );
 
     public static $personality_traits = array(
-        'INTP' => array( 'ti', 'ne', 'si', 'fe', 'te', 'ni', 'se', 'fi', 'fe', 'si', 'ne', 'ti', 'fi', 'se', 'ni', 'te' ),
-        'ENTP' => array( 'ne', 'ti', 'fe', 'si', 'ni', 'te', 'fi', 'se', 'si', 'fe', 'ti', 'ne', 'se', 'fi', 'te', 'ni' ),
-        'ISFJ' => array( 'si', 'fe', 'ti', 'ne', 'se', 'fi', 'te', 'ni', 'ne', 'ti', 'fe', 'si', 'ni', 'te', 'fi', 'se' ),
-        'ESFJ' => array( 'fe', 'si', 'ne', 'ti', 'fi', 'se', 'ni', 'te', 'ti', 'ne', 'si', 'fe', 'te', 'ni', 'se', 'fi' ),
-        'ENTJ' => array( 'te', 'ni', 'se', 'fi', 'ti', 'ne', 'si', 'fe', 'fi', 'se', 'ni', 'te', 'fe', 'si', 'ne', 'ti' ),
-        'INTJ' => array( 'ni', 'te', 'fi', 'se', 'ne', 'ti', 'fe', 'si', 'se', 'fi', 'te', 'ni', 'si', 'fe', 'ti', 'ne' ),
-        'ESFP' => array( 'se', 'fi', 'te', 'ni', 'si', 'fe', 'ti', 'ne', 'ni', 'te', 'fi', 'se', 'ne', 'ti', 'fe', 'si' ),
-        'ISFP' => array( 'fi', 'se', 'ni', 'te', 'fe', 'si', 'ne', 'ti', 'te', 'ni', 'se', 'fi', 'ti', 'ne', 'si', 'fe' ),
-        'ISTP' => array( 'ti', 'se', 'ni', 'fe', 'te', 'si', 'ne', 'fi', 'fe', 'ni', 'se', 'ti', 'fi', 'ne', 'si', 'te' ),
-        'ESTP' => array( 'se', 'ti', 'fe', 'ni', 'si', 'te', 'fi', 'ne', 'ni', 'fe', 'ti', 'se', 'ne', 'fi', 'te', 'si' ),
-        'INFJ' => array( 'ni', 'fe', 'ti', 'se', 'ne', 'fi', 'te', 'si', 'se', 'ti', 'fe', 'ni', 'si', 'te', 'fi', 'ne' ),
-        'ENFJ' => array( 'fe', 'ni', 'se', 'ti', 'fi', 'ne', 'si', 'te', 'ti', 'se', 'ni', 'fe', 'te', 'si', 'ne', 'fi' ),
-        'ESTJ' => array( 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe', 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti' ),
-        'ISTJ' => array( 'si', 'te', 'fi', 'ne', 'se', 'ti', 'fe', 'ni', 'ne', 'fi', 'te', 'si', 'ni', 'fe', 'ti', 'se' ),
-        'ENFP' => array( 'ne', 'fi', 'te', 'si', 'ni', 'fe', 'ti', 'se', 'si', 'te', 'fi', 'ne', 'se', 'ti', 'fe', 'ni' ),
-        'INFP' => array( 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti', 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe' )
+        'ESTJ' => array( 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe', 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti'  ),
+        'ISTJ' => array( 'si', 'te', 'fi', 'ne', 'se', 'ti', 'fe', 'ni', 'si', 'te', 'fi', 'ne', 'se', 'ti', 'fe', 'ni'  ),
+        'ESTP' => array( 'se', 'ti', 'fe', 'ni', 'si', 'te', 'fi', 'ne', 'ni', 'fe', 'ti', 'se', 'ne', 'fi', 'te', 'si'  ),
+        'ISTP' => array( 'ti', 'se', 'ni', 'fe', 'te', 'si', 'ne', 'fi', 'fe', 'ni', 'se', 'ti', 'fi', 'ne', 'si', 'te'  ),
+        'ESFP' => array( 'se', 'fi', 'te', 'ni', 'si', 'fe', 'ti', 'ne', 'ni', 'te', 'fi', 'se', 'ne', 'ti', 'fe', 'si'  ),
+        'ISFP' => array( 'fi', 'se', 'ni', 'te', 'fe', 'si', 'ne', 'ti', 'te', 'ni', 'se', 'fi', 'ti', 'ne', 'si', 'fe'  ),
+        'ESFJ' => array( 'fe', 'si', 'ne', 'ti', 'fi', 'se', 'ni', 'te', 'ti', 'ne', 'si', 'fe', 'te', 'ni', 'se', 'fi'  ),
+        'ISFJ' => array( 'si', 'fe', 'ti', 'ne', 'se', 'fi', 'te', 'ni', 'ne', 'ti', 'fe', 'si', 'ni', 'te', 'fi', 'se'  ),
+        'ENTP' => array( 'ne', 'ti', 'fe', 'si', 'ni', 'te', 'fi', 'se', 'si', 'fe', 'ti', 'ne', 'se', 'fi', 'te', 'ni'  ),
+        'INTP' => array( 'ti', 'ne', 'si', 'fe', 'te', 'ni', 'se', 'fi', 'fe', 'si', 'ne', 'ti', 'fi', 'se', 'ni', 'te'  ),
+        'ENTJ' => array( 'te', 'ni', 'se', 'fi', 'ti', 'ne', 'si', 'fe', 'fi', 'se', 'ni', 'te', 'fe', 'si', 'ne', 'ti'  ),
+        'INTJ' => array( 'ni', 'te', 'fi', 'se', 'ne', 'ti', 'fe', 'si', 'se', 'fi', 'te', 'ni', 'si', 'fe', 'ti', 'ne'  ),
+        'ENFJ' => array( 'fe', 'ni', 'se', 'ti', 'fi', 'ne', 'si', 'te', 'ti', 'se', 'ni', 'fe', 'te', 'si', 'ne', 'fi'  ),
+        'INFJ' => array( 'ni', 'fe', 'ti', 'se', 'ne', 'fi', 'te', 'si', 'se', 'ti', 'fe', 'ni', 'si', 'te', 'fi', 'ne'  ),
+        'ENFP' => array( 'ne', 'fi', 'te', 'si', 'ni', 'fe', 'ti', 'se', 'si', 'te', 'fi', 'ne', 'se', 'ti', 'fe', 'ni'  ),
+        'INFP' => array( 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti', 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe'  ),
     );
+
+    // public static $personality_traits = array(
+    //     'INTP' => array( 'ti', 'ne', 'si', 'fe', 'te', 'ni', 'se', 'fi', 'fe', 'si', 'ne', 'ti', 'fi', 'se', 'ni', 'te' ),
+    //     'ENTP' => array( 'ne', 'ti', 'fe', 'si', 'ni', 'te', 'fi', 'se', 'si', 'fe', 'ti', 'ne', 'se', 'fi', 'te', 'ni' ),
+    //     'ISFJ' => array( 'si', 'fe', 'ti', 'ne', 'se', 'fi', 'te', 'ni', 'ne', 'ti', 'fe', 'si', 'ni', 'te', 'fi', 'se' ),
+    //     'ESFJ' => array( 'fe', 'si', 'ne', 'ti', 'fi', 'se', 'ni', 'te', 'ti', 'ne', 'si', 'fe', 'te', 'ni', 'se', 'fi' ),
+    //     'ENTJ' => array( 'te', 'ni', 'se', 'fi', 'ti', 'ne', 'si', 'fe', 'fi', 'se', 'ni', 'te', 'fe', 'si', 'ne', 'ti' ),
+    //     'INTJ' => array( 'ni', 'te', 'fi', 'se', 'ne', 'ti', 'fe', 'si', 'se', 'fi', 'te', 'ni', 'si', 'fe', 'ti', 'ne' ),
+    //     'ESFP' => array( 'se', 'fi', 'te', 'ni', 'si', 'fe', 'ti', 'ne', 'ni', 'te', 'fi', 'se', 'ne', 'ti', 'fe', 'si' ),
+    //     'ISFP' => array( 'fi', 'se', 'ni', 'te', 'fe', 'si', 'ne', 'ti', 'te', 'ni', 'se', 'fi', 'ti', 'ne', 'si', 'fe' ),
+    //     'ISTP' => array( 'ti', 'se', 'ni', 'fe', 'te', 'si', 'ne', 'fi', 'fe', 'ni', 'se', 'ti', 'fi', 'ne', 'si', 'te' ),
+    //     'ESTP' => array( 'se', 'ti', 'fe', 'ni', 'si', 'te', 'fi', 'ne', 'ni', 'fe', 'ti', 'se', 'ne', 'fi', 'te', 'si' ),
+    //     'INFJ' => array( 'ni', 'fe', 'ti', 'se', 'ne', 'fi', 'te', 'si', 'se', 'ti', 'fe', 'ni', 'si', 'te', 'fi', 'ne' ),
+    //     'ENFJ' => array( 'fe', 'ni', 'se', 'ti', 'fi', 'ne', 'si', 'te', 'ti', 'se', 'ni', 'fe', 'te', 'si', 'ne', 'fi' ),
+    //     'ESTJ' => array( 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe', 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti' ),
+    //     'ISTJ' => array( 'si', 'te', 'fi', 'ne', 'se', 'ti', 'fe', 'ni', 'ne', 'fi', 'te', 'si', 'ni', 'fe', 'ti', 'se' ),
+    //     'ENFP' => array( 'ne', 'fi', 'te', 'si', 'ni', 'fe', 'ti', 'se', 'si', 'te', 'fi', 'ne', 'se', 'ti', 'fe', 'ni' ),
+    //     'INFP' => array( 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti', 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe' )
+    // );
+
 
     public static $trait_relation = array(
         'f' => 't',
