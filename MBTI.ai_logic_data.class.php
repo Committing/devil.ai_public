@@ -182,7 +182,7 @@ class MBTI_logic_data extends ai_extended_logic
             'subconscious' => 'ESTP',
             'unconscious' => 'ENFP',
             'superego' => 'ISTJ',
-            'hero' => 'The Wise Sage',
+            'hero' => 'The Sage',
             'description' => 'Creative and mystical, with a rare combination of vision and willpower.',
             'jobs' => array(
                 'Catholic Studies',
