@@ -91,8 +91,13 @@ class ai_extended_logic extends logic_calculation_data
     }
 
 
-    
-    public static function traitOrder($traits, $dataset, $type = 'conscious')
+    /**
+     * Order the array using score values from test results.
+     * (Highest score for e/i is the conscious result)
+     * 
+     * ...
+     */
+    public static function traitOrder($dataset, $type = 'conscious')
     {
         $order = $labels = array();
         $labels['conscious'] = array('inferior', 'child', 'parent', 'hero');
@@ -100,13 +105,59 @@ class ai_extended_logic extends logic_calculation_data
 
         // Order by array key
         usort($dataset['ordered'], function ($a, $b) use (&$type) { return strnatcmp($a[$type . '_value'], $b[$type . '_value']); });
-
+    
         foreach ($dataset['ordered'] as $key => $var) {
             $order[ $labels[$type][$key] ]['trait'] = $var[$type . '_trait'];
             $order[ $labels[$type][$key] ]['value'] = $var[$type . '_value'];
         }
 
         return $order;
+    }
+
+
+    /**
+     * Check value exists and decide
+     * whether function is a conscious
+     * or shadow division
+     * 
+     * @param  array $traits List of traits:
+     *    Array
+     *      (
+     *          [fe] => 149
+     *          [fi] => 625
+     *          [ne] => 1574
+     *          [ni] => 1387
+     *          [se] => 500
+     *          [si] => 1037
+     *          [te] => 724
+     *          [ti] => 1687
+     *      )
+     * @param string $function_e extraverted function name
+     * @param string $function_i introverted function name
+     * @return array division predictions
+     * 
+     */
+    public static function divisionPrediction($trait_data, $function_e, $function_i)
+    {
+
+        if (isset($trait_data[$function_e]) && ! empty($trait_data[$function_e])) {
+            // Exists
+        } else {
+            $trait_data[$function_e] = 0;
+        }
+
+        if (isset($trait_data[$function_i]) && ! empty($trait_data[$function_i])) {
+            // Exists
+        } else {
+            $trait_data[$function_i] = 0;
+        }
+
+        return array(
+            'conscious_trait' => ($trait_data[$function_e] > $trait_data[$function_i] ? $function_e : $function_i),
+            'conscious_value' => ($trait_data[$function_e] > $trait_data[$function_i] ? $trait_data[$function_e] : $trait_data[$function_i]),
+            'shadow_trait' =>    ($trait_data[$function_e] > $trait_data[$function_i] ? $function_i : $function_e),
+            'shadow_value' =>    ($trait_data[$function_e] > $trait_data[$function_i] ? $trait_data[$function_i] : $trait_data[$function_e]),
+        );
     }
 
 
@@ -139,76 +190,81 @@ class ai_extended_logic extends logic_calculation_data
         $data['predictions'] = self::$personality_defaults;
 
         $data['ordered'] = array(
-            'f' => array(
-                'conscious_trait' => (@$traits['fe'] > @$traits['fi'] ? 'fe' : 'fi'),
-                'conscious_value' => (@$traits['fe'] > @$traits['fi'] ? @$traits['fe'] : @$traits['fi']),
-                'shadow_trait' =>    (@$traits['fe'] > @$traits['fi'] ? 'fi' : 'fe'),
-                'shadow_value' =>    (@$traits['fe'] > @$traits['fi'] ? @$traits['fi'] : @$traits['fe']),
-            ),
-            'n' => array(
-                'conscious_trait' => (@$traits['ne'] > @$traits['ni'] ? 'ne' : 'ni'),
-                'conscious_value' => (@$traits['ne'] > @$traits['ni'] ? @$traits['ne'] : @$traits['ni']),
-                'shadow_trait' =>    (@$traits['ne'] > @$traits['ni'] ? 'ni' : 'ne'),
-                'shadow_value' =>    (@$traits['ne'] > @$traits['ni'] ? @$traits['ni'] : @$traits['ne']),
-            ),
-            's' => array(
-                'conscious_trait' => (@$traits['se'] > @$traits['si'] ? 'se' : 'si'),
-                'conscious_value' => (@$traits['se'] > @$traits['si'] ? @$traits['se'] : @$traits['si']),
-                'shadow_trait' =>    (@$traits['se'] > @$traits['si'] ? 'si' : 'se'),
-                'shadow_value' =>    (@$traits['se'] > @$traits['si'] ? @$traits['si'] : @$traits['se']),
-            ),
-            't' => array(
-                'conscious_trait' => (@$traits['te'] > @$traits['ti'] ? 'te' : 'ti'),
-                'conscious_value' => (@$traits['te'] > @$traits['ti'] ? @$traits['te'] : @$traits['ti']),
-                'shadow_trait' =>    (@$traits['te'] > @$traits['ti'] ? 'ti' : 'te'),
-                'shadow_value' =>    (@$traits['te'] > @$traits['ti'] ? @$traits['ti'] : @$traits['te']),
-            )
+            'f' => self::divisionPrediction($traits, 'fe', 'fi'),
+            'n' => self::divisionPrediction($traits, 'ne', 'ni'),
+            's' => self::divisionPrediction($traits, 'se', 'si'),
+            't' => self::divisionPrediction($traits, 'te', 'ti')
         );
 
-        $data['order_conscious'] = self::traitOrder($traits, $data, 'conscious');
-        $data['order_shadow']    = self::traitOrder($traits, $data, 'shadow');
+        $data['order_conscious'] = self::traitOrder($data, 'conscious');
+        $data['order_shadow']    = self::traitOrder($data, 'shadow');
 
-        foreach (self::$personality_traits as $key => $var) {
 
-            if ($data['order_conscious']['hero']['trait'] == $var[0]) {
-                $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' high conscious trait.';
+        // Below is where the personality matches are found.
+        // self::$personality_traits =  Array
+        // (
+        //     [ESTJ] => Array
+        //         (
+        //             [0] => te
+        //             [1] => si
+        //             [2] => ne
+        //             [3] => fi
+        //             [4] => ti
+        //             [5] => se
+        //             [6] => ni
+        //             [7] => fe
+        //         )
+
+        //     [ISTJ] => Array
+        //         (
+        //             [0] => si
+        //             [1] => te
+        //             [2] => fi
+        //             [3] => ne
+        // ...
+        foreach (self::$personality_traits as $personality_acronym => $function) {
+
+            if ($data['order_conscious']['hero']['trait'] == $function[0]) {
+                $data['predictions'][$personality_acronym]++;
+                $data['debug'][] = 'Matching ' . htmlentities($personality_acronym) . ' high conscious trait.';
             }
 
-            if ($data['order_conscious']['parent']['trait'] == $var[1]) {
-                $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' second highest conscious trait.';
+            if ($data['order_conscious']['parent']['trait'] == $function[1]) {
+                $data['predictions'][$personality_acronym]++;
+                $data['debug'][] = 'Matching ' . htmlentities($personality_acronym) . ' second highest conscious trait.';
             }
 
-            if ($data['order_conscious']['child']['trait'] == $var[2]) {
-                $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' second lowest conscious trait.';
+            if ($data['order_conscious']['child']['trait'] == $function[2]) {
+                $data['predictions'][$personality_acronym]++;
+                $data['debug'][] = 'Matching ' . htmlentities($personality_acronym) . ' second lowest conscious trait.';
             }
 
-            if ($data['order_conscious']['inferior']['trait'] == $var[3]) {
-                $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' lowest conscious trait.';
+            if ($data['order_conscious']['inferior']['trait'] == $function[3]) {
+                $data['predictions'][$personality_acronym]++;
+                $data['debug'][] = 'Matching ' . htmlentities($personality_acronym) . ' lowest conscious trait.';
             }
 
-            if ($data['order_shadow']['nemesis']['trait'] == $var[4]) {
-                $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' high unconscious trait.';
+            if ($data['order_shadow']['nemesis']['trait'] == $function[4]) {
+                $data['predictions'][$personality_acronym]++;
+                $data['debug'][] = 'Matching ' . htmlentities($personality_acronym) . ' high unconscious trait.';
             }
 
-            if ($data['order_shadow']['critic']['trait'] == $var[5]) {
-                $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' second highest unconscious trait.';
+            if ($data['order_shadow']['critic']['trait'] == $function[5]) {
+                $data['predictions'][$personality_acronym]++;
+                $data['debug'][] = 'Matching ' . htmlentities($personality_acronym) . ' second highest unconscious trait.';
             }
 
-            if ($data['order_shadow']['trickster']['trait'] == $var[6]) {
-                $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' second lowest unconscious trait.';
+            if ($data['order_shadow']['trickster']['trait'] == $function[6]) {
+                $data['predictions'][$personality_acronym]++;
+                $data['debug'][] = 'Matching ' . htmlentities($personality_acronym) . ' second lowest unconscious trait.';
             }
 
-            if ($data['order_shadow']['demon']['trait'] == $var[7]) {
-                $data['predictions'][$key]++;
-                $data['debug'][] = 'Matching ' . $key . ' lowest unconscious trait.';
+            if ($data['order_shadow']['demon']['trait'] == $function[7]) {
+                $data['predictions'][$personality_acronym]++;
+                $data['debug'][] = 'Matching ' . htmlentities($personality_acronym) . ' lowest unconscious trait.';
             }
+
+            // Further logic to calculate results is top-heavy. Code is conscious. Personalities are subconscious.
 
         }
 
