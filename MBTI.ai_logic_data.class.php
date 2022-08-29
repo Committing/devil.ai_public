@@ -46,6 +46,11 @@ class MBTI_logic_data extends ai_extended_logic
         'INFP' => array('all' => 0.02, 'male' => 0.015, 'female' => 0.025),
     );
 
+
+
+
+
+    // Old data, see self::buildPersonalityCompatibility()
     public static $personality_compatibility = array(
         'INFP' => array( 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2 ),
         'ENFP' => array( 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5 ),
@@ -65,24 +70,29 @@ class MBTI_logic_data extends ai_extended_logic
         'ESTJ' => array( 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4 ),
     );
 
-    // public static $personality_compatibility = array(
-    //     'INFP' => array( 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2 ),
-    //     'ENFP' => array( 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5 ),
-    //     'INFJ' => array( 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5, 5, 5, 5 ),
-    //     'ENFJ' => array( 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 2, 5, 5, 5, 5, 5 ),
-    //     'INTJ' => array( 5, 5, 5, 5, 4, 5, 5, 5, 5, 2, 5, 5, 5, 5, 5, 5 ),
-    //     'ENTJ' => array( 5, 5, 5, 5, 5, 4, 5, 5, 2, 5, 5, 5, 5, 5, 5, 5 ),
-    //     'INTP' => array( 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5, 2, 5, 5 ),
-    //     'ENTP' => array( 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 2, 5, 5, 5 ),
-    //     'ISFP' => array( 5, 5, 5, 5, 5, 2, 5, 5, 4, 5, 5, 5, 5, 5, 5, 5 ),
-    //     'ESFP' => array( 5, 5, 5, 5, 2, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5 ),
-    //     'ISTP' => array( 5, 5, 5, 2, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5 ),
-    //     'ESTP' => array( 5, 5, 2, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 5, 5, 5 ),
-    //     'ISFJ' => array( 5, 5, 5, 5, 5, 5, 5, 2, 5, 5, 5, 5, 4, 5, 5, 5 ),
-    //     'ESFJ' => array( 5, 5, 5, 5, 5, 5, 2, 5, 5, 5, 5, 5, 5, 4, 5, 5 ),
-    //     'ISTJ' => array( 5, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5 ),
-    //     'ESTJ' => array( 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4 ),
-    // );
+    public static $personality_compatibility_new = array(
+        0 => 'INFP',
+        1 => 'ENFP',
+        2 => 'INFJ',
+        3 => 'ENFJ',
+        4 => 'INTJ',
+        5 => 'ENTJ',
+        6 => 'INTP',
+        7 => 'ENTP',
+        8 => 'ISFJ',
+        9 => 'ESFJ',
+        10 => 'ISFP',
+        11 => 'ESFP',
+        12 => 'ISTP',
+        13 => 'ESTP',
+        14 => 'ISTJ',
+        15 => 'ESTJ',
+    );
+
+
+
+
+
 
     public static $personality_traits = array(
         'ESTJ' => array( 'te', 'si', 'ne', 'fi', 'ti', 'se', 'ni', 'fe', 'fi', 'ne', 'si', 'te', 'fe', 'ni', 'se', 'ti'  ),
@@ -580,6 +590,50 @@ class MBTI_logic_data extends ai_extended_logic
             'ISTJ' => 1.25
         )
     );
+
+
+
+
+    public static function buildPersonalityCompatibility()
+    {
+        $data = array();
+
+        foreach (self::$personality_compatibility_new as $index => $pt) {
+
+            $data[$pt] = array();
+
+            foreach (self::$personality_compatibility_new as $index_2 => $pt2) {
+
+                $compatibility = 5;
+
+                if (self::$personality_data[$pt]['subconscious'] == $pt2) {
+                    $compatibility = 1;
+                }
+
+                if (self::$personality_data[$pt]['superego'] == $pt2) {
+                    $compatibility = 2;
+                }
+
+                if (self::$personality_data[$pt]['unconscious'] == $pt2) {
+                    $compatibility = 3;
+                }
+
+                if (self::$personality_data[$pt]['ego'] == $pt2) {
+                    $compatibility = 4;
+                }
+
+                $data[$pt][] = $compatibility;
+
+            }
+
+        }
+
+        return $data;
+
+    }
+
+
+
 
 
 }

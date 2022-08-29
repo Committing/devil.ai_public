@@ -92,23 +92,72 @@ class ai_extended_logic extends logic_calculation_data
 
 
     /**
-     * Order the array using score values from test results.
-     * (Highest score for e/i is the conscious result)
+     * Step 1: Order the array using score values from test results.
+     * (Highest score for e/i [i.e. ne/ni] is the conscious result)
+     * (Lowest score for e/i [i.e. se/si] is the unconscious result)
      * 
-     * ...
+     * @param array $dataset = Array
+     * (
+     *  [f] => Array
+     *      (
+     *          [conscious_trait] => fi
+     *          [conscious_value] => 2065
+     *          [shadow_trait] => fe
+     *          [shadow_value] => 1740
+     *      )
+     *
+     *  [n] => Array
+     *      (
+     *          [conscious_trait] => ni
+     *          [conscious_value] => 2000
+     *          [shadow_trait] => ne
+     *  ...
+     *
+     *  Step 2 [conscious division only]: Swap parent with child if conflicting with hero.
+     *
      */
-    public static function traitOrder($dataset, $type = 'conscious')
+    public static function functionOrder($dataset, $type = 'conscious')
     {
+        // Step 1
         $order = $labels = array();
         $labels['conscious'] = array('inferior', 'child', 'parent', 'hero');
         $labels['shadow']    = array('demon', 'trickster', 'critic', 'nemesis');
 
-        // Order by array key
-        usort($dataset['ordered'], function ($a, $b) use (&$type) { return strnatcmp($a[$type . '_value'], $b[$type . '_value']); });
+        // Order by array value
+        usort($dataset, function ($a, $b) use (&$type) { return strnatcmp($a[$type . '_value'], $b[$type . '_value']); });
     
-        foreach ($dataset['ordered'] as $key => $var) {
+        foreach ($dataset as $key => $var) {
             $order[ $labels[$type][$key] ]['trait'] = $var[$type . '_trait'];
             $order[ $labels[$type][$key] ]['value'] = $var[$type . '_value'];
+        }
+
+        // Step 2
+        if ($type == 'conscious') {
+
+            $matches = false;
+
+            foreach (self::$personality_traits as $personality_type => $functions) {
+
+                // $functions[0] is hero, $functions[2] is child.
+                if ($order['hero']['trait'] == $functions[0] && $order['parent']['trait'] == $functions[2]) {
+
+                    $matches = $personality_type;
+
+                }
+
+            }
+
+            if ($matches != false) {
+
+                // Swap parent with child
+
+                $original_order = $order;
+
+                $order['parent'] = $original_order['child'];
+                $order['child'] = $original_order['parent'];
+
+            }
+
         }
 
         return $order;
@@ -196,8 +245,8 @@ class ai_extended_logic extends logic_calculation_data
             't' => self::divisionPrediction($traits, 'te', 'ti')
         );
 
-        $data['order_conscious'] = self::traitOrder($data, 'conscious');
-        $data['order_shadow']    = self::traitOrder($data, 'shadow');
+        $data['order_conscious'] = self::functionOrder($data['ordered'], 'conscious');
+        $data['order_shadow']    = self::functionOrder($data['ordered'], 'shadow');
 
 
         // Below is where the personality matches are found.
