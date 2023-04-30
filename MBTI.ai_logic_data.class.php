@@ -16,7 +16,6 @@ class MBTI_logic_data extends ai_extended_logic
         ),
         'primary_contributors' => array(
             'mwu.jpg' => array( 'data' => '' )
-            // 'linda.png' => array( 'data' => '' )
         )
     );
 
