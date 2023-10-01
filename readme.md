@@ -8,7 +8,7 @@ For: https://mbti.ai
 ## Main Logic
 > ./ai_extended_logic.class.php
 
-Logic for personality Myers Briggs results.
+Logic for personality results.
 
 ## Data
 > ./MBTI.ai_logic_data.class.php
