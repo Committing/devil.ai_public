@@ -3,8 +3,6 @@
 
 # [PersonalityPolice.com](https://personalitypolice.com)
 
-For: [https://personalitypolice.com](https://personalitypolice.com)
-
 ## Main Logic
 > ./ai_extended_logic.class.php
 
