@@ -319,7 +319,7 @@ class ai_extended_logic extends logic_calculation_data
 
         arsort($data['predictions']);
 
-        if ($log === true) {
+        if ($log === true && function_exists('the_logger')) {
             global_logger('Results: ' . print_r($data['predictions'], true));
         }
 
