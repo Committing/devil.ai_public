@@ -1,5 +1,5 @@
 
-![The Smart Test Logo](https://personalitypolice.com/assets/images/perosnalitypolicegithub.png)
+![The Smart Test Logo](https://personalitypolice.com/assets/images/perosnalitypolicegithub.png?v=1)
 
 # [PersonalityPolice.com](https://personalitypolice.com)
 
