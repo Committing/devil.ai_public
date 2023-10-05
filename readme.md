@@ -1,9 +1,9 @@
 
-![The Smart Test MBTI.ai Logo](https://mbti.ai/assets/images/mmmm.png)
+![The Smart Test Logo](https://personalitypolice.com/assets/images/perosnalitypolicegithub.png)
 
-# [MBTI.ai](https://mbti.ai)
+# [PersonalityPolice.com](https://personalitypolice.com)
 
-For: https://mbti.ai
+For: [https://mbti.ai](https://personalitypolice.com)
 
 ## Main Logic
 > ./ai_extended_logic.class.php
