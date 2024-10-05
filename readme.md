@@ -1,7 +1,7 @@
 
 ![The Smart Test Logo](https://personalitypolice.com/assets/images/perosnalitypolicegithub.png?v=3)
 
-# [PersonalityPolice.com](https://personalitypolice.com)
+# [Devil.ai](https://devil.ai)
 
 ## Main Logic
 > ./ai_extended_logic.class.php
